@@ -3,6 +3,8 @@ HOST: https://api.poniverse.net/v1/
 --- Poniverse API v1 ---
 ---
 This is v1 of the Poniverse API, currently while the larger parts of Poniverse is underwraps and in development the only endpoints available are those relating to user data.
+
+Remember ALL endpoints requires an access token.
 ---
 
 --
@@ -10,7 +12,14 @@ User Resources
 --
 
 Gets the "logged in user" (read: the user the access token is bound to)
-GET /users{?access_token,string}
+GET /users{?access_token}
 < 200
 < Content-Type: application/json
 {"id":3757,"username":"Lavoaster","display_name":"Lavoaster","slug":"","email":"adam@lavoaster.co.uk","last_login":"2013-10-24 19:21:03","created_at":"2012-04-21 14:25:07"}
+
+
+Gets a user by their id
+GET /users/{id}
+< 200
+< Content-Type: application/json
+{"id":1,"display_name":"Feld0","slug":"","created_at":"2011-10-03 04:29:24"}
