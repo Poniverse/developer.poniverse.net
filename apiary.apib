@@ -11,8 +11,8 @@ Remember ALL endpoints requires an access token.
 User Resources
 --
 
-Gets the "logged in user" (read: the user the access token is bound to)
-GET /users{?access_token}
+Gets the "logged in user", the user the access token is bound to.
+GET /users/me
 > Accept: application/json
 < 200
 < Content-Type: application/json
